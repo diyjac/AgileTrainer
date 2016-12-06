@@ -39,7 +39,7 @@ My next version is a bit more towards what I intended, an interactive trainer th
 
 ![Final Continuous Trainer Design ](./FinalContinuousTrainerDesign.jpg)
 
-This is what it looks like when running:
+Below is what a version of it looks like when running.  The generic version only has one video view since I am not sure what additional preprocessing your model will need to display on a PyGame screen.
 
 ![Continous Training: Directly Interfacing the Trainer and Simulator ](./continuous_training_on_track1.png)
 
@@ -65,5 +65,9 @@ These tools are meant to be improved.  Some ideas are:
 4. Update trainer with multiple models for re-enforment training?
    - Get a model that knows how to drive a track train a new model
 
-Have fun!
+
+## Have fun!
+
+Feel free to fork this repository and make a different version!
+
 
