@@ -65,6 +65,9 @@ These tools are meant to be improved.  Some ideas are:
 4. Update trainer with multiple models for re-enforment training?
    - Get a model that knows how to drive a track train a new model
 
+## NOTE:
+
+Accuracy in the training is not a good indicator if your model will do well on the track!  Only performing well on the track is a true measure of the model's performance.
 
 ## Have fun!
 
