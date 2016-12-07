@@ -25,6 +25,8 @@ Training in batch mode is tough!  Times from step 1 to 3 could take hours, befor
 
 This leads to a very unsatisfactory experience.  The data collection, model design, training and testing cycle needs to be faster.  After going through this cycle seven times, on the eighth try, I decided to do something different.  The idea is that the design of the data collection, collecting/sampling, and then actual training loop is taking too long.  So, to shorten it, we will try an "agile" development process, where instead of an waterfall approach, we iterate more quickly with idea, design, data gathering and training in a tighter interactive loop with feedback.  
 
+#### NOTE: The Agile Trainer trains on already semi-working models iteratively.  You can load a pre-trained model, train it on some tough spots that it has a hard time with, save it, test it on drive.py and then load it back and train it some more.  It is not intended to train a model from scatch, although you could do that too if you have the model saved before it has been trained.
+
 ## Initial "Intervention" Validator Prototype
 
 While looking for a way to get the training images and steering angles out faster, I found that drive.py module was the closest fit to what we need, since it was able to communicate with the Simulator and get the images and steering angles directly.  Following this reasoning, I put together an initial proof of concept.  The initial version is more of a human "intervention" validator.  Think of a self driving car that is in test that needs someone to hit the emergency stop if it goes in the wrong direction.  But in this case, we can nudge it in the right direction, so we can see how far it can keep on going at its present training. 
