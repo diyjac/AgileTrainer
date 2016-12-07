@@ -56,6 +56,7 @@ The training tools works in place of the drive.py module that you use previously
 | continuousTrainer.py | Continuous Trainer | Maybe Preprocessing? | python continuousTrainer.py model.json |
 
 ## Instructions and Directions
+####WARNING: One of the most important things to do during development is to make backups (model.py, model.json and model.h5) between iterations, so you may back track to a known good version.  If you have not done this yet, set up a github repository and commit often.  I cannot tell you how many times this saved my ass!
 
 #####  1. Make sure you have PyGame module installed.  Try either "conda install pygame" or "pip install pygame"
 
@@ -71,7 +72,6 @@ The training tools works in place of the drive.py module that you use previously
 $ python pygameJoyDriveInterface.py yourSavedModel.json
 ```
 #####  6.  Once you identify trouble areas that you needed to intervene, run the "continuousTrainer.py" and drive to those key locations.  Move Up the joystick to slow down and take as much time in those areas as possible to collect as much data points as you can.  This will be fed to the trainer in real-time and the trainer will start training the model that was loaded.  Wait for your model to be saved at least once before you try to run it again against either"pygameJoyDriveInterface.py", or "drive.py".  Remember, your model will be evaluated against "drive.py", so make sure it works there in its final form on Track1!  Use button(0), X button on the PS3, to override any data points that are bad, i.e.: You are about to crash, or go off the track.
-####WARNING: One of the most important things to do during development is to make backups (model.py, model.json and model.h5) between iterations, so you may back track to a known good version.  If you have not done this yet, set up a github repository and commit often.  I cannot tell you how many times this saved my ass!
 ```
 $ python continuousTrainer.py yourSavedModel.json
 ```
