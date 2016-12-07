@@ -59,7 +59,7 @@ The training tools works in place of the drive.py module that you use previously
 
 1. Make sure you have PyGame module installed.  Try either "conda install pygame" or "pip install pygame"
 
-2.  This version assumes you have a PS3 joystick.  Others may work, but I have not tried it.  If you got this to work on other joysticks or even keyboard, please let us know so we can update the instructions for everyone benefit!  Use "PS3Controller.sh" to start up the "xboxdrv" driver for PS3.  If you are using another joystick, try running the example code for joystick module at the end of the webpage here: http://www.pygame.org/docs/ref/joystick.html.  If you are going to try using keyboard, make a copy of "pygameJoyDriveInterface.py" and try to get the key module working: http://www.pygame.org/docs/ref/key.html.  Once you do, modify the "continuousTrainer.py" code the same way, and let us know your awesomeness!
+2.  This version assumes you have a PS3 joystick.  Others may work, but I have not tried it.  If you get this to work on other joysticks or even keyboard, please let us know so we can update the instructions for everyone benefit!  Use "PS3Controller.sh" to start up the "xboxdrv" driver for PS3.  If you are using another joystick, try running the example code for joystick module at the end of the webpage here: http://www.pygame.org/docs/ref/joystick.html.  If you are going to try using keyboard, make a copy of "pygameJoyDriveInterface.py" and try to get the key module working: http://www.pygame.org/docs/ref/key.html.  Once you do, modify the "continuousTrainer.py" code the same way, and let us know your awesomeness!
 
 3.  Start out with a model that you already have a model.json and model.h5 saved.
 
