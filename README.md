@@ -55,6 +55,31 @@ The training tools works in place of the drive.py module that you use previously
 | pygameJoyDriveInterface.py | Initial Prototype to interface pygame, drive.py and the model | Maybe Preprocessing? | python pygameJoyDriveInterface model.json |
 | continuousTrainer.py | Continuous Trainer | Maybe Preprocessing? | python continuousTrainer.py model.json |
 
+## Instructions
+
+1. Make sure you have PyGame module installed.  Try either "conda install pygame" or "pip install pygame"
+
+2.  This version assumes you have a PS3 joystick.  Others may work, but I have not tried it.  If you got this to work on other joysticks or even keyboard, please let us know so we can update the instructions for everyone benefit!  Use "PS3Controller.sh" to start up the "xboxdrv" driver for PS3.  If you are using another joystick, try running the example code for joystick module at the end of the webpage here: http://www.pygame.org/docs/ref/joystick.html.  If you are going to try using keyboard, make a copy of "pygameJoyDriveInterface.py" and try to get the key module working: http://www.pygame.org/docs/ref/key.html.  Once you do, modify the "continuousTrainer.py" code the same way, and let us know your awesomeness!
+
+3.  Start out with a model that you already have a model.json and model.h5 saved.
+
+4.  Use the "pygameJoyDriveInterface.py" first and test how well your model drives itself.  You can "nudge" your simulated car back on track if it starts veering off.  Think of training wheels for your SDC.
+
+5.  Once you identify trouble areas that you needed to intervene, run the "continuousTrainer.py" and drive to those key locations.  Move Up the joystick to slow down and take as much time in those areas as possible to collect as much data points as you can.  This will be fed to the trainer in real-time and the trainer will start training the model that was loaded.  Wait for your model to be saved at least once before you try to run it again against either"pygameJoyDriveInterface.py", or "drive.py".  Remember, your model will be evaluated against "drive.py", so make sure it works there in its final form on Track1!
+
+6.  If you experience slowness in training, you may need to adjust these values in the code for your environment, in particular if you are CPU based:
+
+```python
+            batch_size = 20
+            samples_per_epoch = int(len(X)/batch_size)
+            val_size = int(samples_per_epoch/10)
+            if val_size < 10:
+                val_size = 10
+            nb_epoch = 100
+```
+
+Please let us what adjustments works for you so others may know your awesomeness!
+
 ## Additional Areas to Explore
 
 These tools are meant to be improved.  Some ideas are:
