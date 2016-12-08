@@ -60,24 +60,26 @@ The training tools works in place of the drive.py module that you use previously
 ## Instructions and Directions
 ####WARNING: One of the most important things to do during development is to make backups (model.py, model.json and model.h5) between iterations, so you may back track to a known good version.  If you have not done this yet, set up a github repository and commit often.  I cannot tell you how many times this saved my ass!
 
-#####  1. Make sure you have PyGame module installed.  Try either "conda install pygame" or "pip install pygame"
+#####  1. Edit the pygameJoyDriveInterface.py and continuousTrainer.py.  Update any preprocessing you require for your model.
 
-#####  2.  This version assumes you have a PS3 joystick.  Others may work, but I have not tried it.  If you get this to work on other joysticks or even keyboard, please let us know so we can update the instructions for everyone benefit!  Use "PS3Controller.sh" to start up the "xboxdrv" driver for PS3.  If you are using another joystick, try running the example code for joystick module at the end of the webpage here: http://www.pygame.org/docs/ref/joystick.html.  If you are going to try using keyboard, make a copy of "pygameJoyDriveInterface.py" and try to get the key module working: http://www.pygame.org/docs/ref/key.html.  Once you do, modify the "continuousTrainer.py" code the same way, and let us know your awesomeness!
+#####  2. Make sure you have PyGame module installed.  Try either "conda install pygame" or "pip install pygame"
 
-#####  3.  Start out with a model that you already have a model.json and model.h5 saved.
+#####  3.  This version assumes you have a PS3 joystick.  Others may work, but I have not tried it.  If you get this to work on other joysticks or even keyboard, please let us know so we can update the instructions for everyone benefit!  Use "PS3Controller.sh" to start up the "xboxdrv" driver for PS3.  If you are using another joystick, try running the example code for joystick module at the end of the webpage here: http://www.pygame.org/docs/ref/joystick.html.  If you are going to try using keyboard, make a copy of "pygameJoyDriveInterface.py" and try to get the key module working: http://www.pygame.org/docs/ref/key.html.  Once you do, modify the "continuousTrainer.py" code the same way, and let us know your awesomeness!
 
-#####  4.  Start up the SDC Simulator in Autonimous Mode.
+#####  4.  Start out with a model that you already have a model.json and model.h5 saved.
 
-#####  5.  Use the "pygameJoyDriveInterface.py" first and test how well your model drives itself.  You can "nudge" your simulated car back on track if it starts veering off.  Think of training wheels for your SDC.
+#####  5.  Start up the SDC Simulator in Autonimous Mode.
+
+#####  6.  Use the "pygameJoyDriveInterface.py" first and test how well your model drives itself.  You can "nudge" your simulated car back on track if it starts veering off.  Think of training wheels for your SDC.
 
 ```
 $ python pygameJoyDriveInterface.py yourSavedModel.json
 ```
-#####  6.  Once you identify trouble areas that you needed to intervene, run the "continuousTrainer.py" and drive to those key locations.  Move Up the joystick to slow down and take as much time in those areas as possible to collect as much data points as you can.  This will be fed to the trainer in real-time and the trainer will start training the model that was loaded.  Wait for your model to be saved at least once before you try to run it again against either"pygameJoyDriveInterface.py", or "drive.py".  Remember, your model will be evaluated against "drive.py", so make sure it works there in its final form on Track1!  Use button(0), X button on the PS3, to override any data points that are bad, i.e.: You are about to crash, or go off the track.
+#####  7.  Once you identify trouble areas that you needed to intervene, run the "continuousTrainer.py" and drive to those key locations.  Move Up the joystick to slow down and take as much time in those areas as possible to collect as much data points as you can.  This will be fed to the trainer in real-time and the trainer will start training the model that was loaded.  Wait for your model to be saved at least once before you try to run it again against either"pygameJoyDriveInterface.py", or "drive.py".  Remember, your model will be evaluated against "drive.py", so make sure it works there in its final form on Track1!  Use button(0), X button on the PS3, to override any data points that are bad, i.e.: You are about to crash, or go off the track.
 ```
 $ python continuousTrainer.py yourSavedModel.json
 ```
-#####  7.  If you experience slowness in training, you may need to adjust these values in the code for your environment, in particular if you are CPU based:
+#####  8.  If you experience slowness in training, you may need to adjust these values in the code for your environment, in particular if you are CPU based:
 ```python
             batch_size = 20
             samples_per_epoch = int(len(X)/batch_size)
