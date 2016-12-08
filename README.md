@@ -75,10 +75,14 @@ The training tools works in place of the drive.py module that you use previously
 ```
 $ python pygameJoyDriveInterface.py yourSavedModel.json
 ```
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=PMbV0JVtNg8" target="_blank"><img src="http://img.youtube.com/vi/PMbV0JVtNg8/0.jpg" alt="Sample Validation Session with pygameJoyDriveInterface.py" width="240" height="180" border="10" /></a>
+
 #####  7.  Once you identify trouble areas that you needed to intervene, run the "continuousTrainer.py" and drive to those key locations.  Move Up the joystick to slow down and take as much time in those areas as possible to collect as much data points as you can.  This will be fed to the trainer in real-time and the trainer will start training the model that was loaded.  Wait for your model to be saved at least once before you try to run it again against either"pygameJoyDriveInterface.py", or "drive.py".  Remember, your model will be evaluated against "drive.py", so make sure it works there in its final form on Track1!  Use button(0), X button on the PS3, to override any data points that are bad, i.e.: You are about to crash, or go off the track.
 ```
 $ python continuousTrainer.py yourSavedModel.json
 ```
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=tryeV54A3zE" target="_blank"><img src="http://img.youtube.com/vi/tryeV54A3zE/0.jpg" alt="Sample Training Session with continuousTrainer.py" width="240" height="180" border="10" /></a>
+
 #####  8.  If you experience slowness in training, you may need to adjust these values in the code for your environment, in particular if you are CPU based:
 ```python
             batch_size = 20
