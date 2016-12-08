@@ -110,6 +110,6 @@ Accuracy in the training is not a good indicator if your model will do well on t
 
 ## Have fun!
 
-Feel free to fork this repository and make a different version!
+Feel free to fork this repository and make a different version!  This tool is only as good as it fits your needs, so modify it!
 
 
