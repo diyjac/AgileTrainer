@@ -104,6 +104,14 @@ These tools are meant to be improved.  Some ideas are:
 4. Update trainer with multiple models for re-enforment training?
    - Get a model that knows how to drive a track train a new model
 
+## Contributing
+
+All help is welcome! The AgileTrainer project is an ongoing and live project. If you'd like to add a new input device, open an issue and even submit it yourself. If you're new to open source, I'll help you get your first commit in, ping me.
+
+## License
+
+AgileTrainer is released under [MIT License](./LICENSE)
+
 ## NOTE:
 
 Accuracy in the training is not a good indicator if your model will do well on the track!  Only performing well on the track is a true measure of the model's performance.
